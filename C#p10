@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace EnumerationExample
+{
+    class Program
+    {
+        enum x
+        {
+            Monday,
+            Tuesday = 3,
+            Wednesday,
+            Thursday,
+            Friday,
+            Saturday
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine((int)x.Monday);
+            Console.WriteLine((int)x.Thursday);
+            Console.WriteLine(x.Friday);
+            Console.ReadKey();
+        }
+    }
+}
