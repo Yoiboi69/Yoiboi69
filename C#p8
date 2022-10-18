@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace DeligateExample
+{
+    public class Class2
+    {
+        public delegate void d1(int a, int b);
+        public void add(int a, int b)
+        {
+            Console.WriteLine(a + b);
+        }
+
+        public void multi(int a, int b)
+        {
+            Console.WriteLine(a * b);
+        }
+
+        public void remain(int a, int b)
+        {
+            Console.WriteLine(a % b);
+        }
+
+        static void Main(string[] args)
+        {
+            Class2 P = new Class2();
+            d1 x = new d1(P.add);
+            x(67, 23);
+            d1 y = new d1(P.multi);
+            y(32, 12);
+            d1 z = new d1(P.remain);
+            z(14, 5);
+            Console.ReadKey();
+        }
+    }
+}
