@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication9
+{
+    class foreachdemo
+    {
+        static void Main(string[] args)
+        {
+            int[] x = new int[] { 10, 20, 30, 40 };
+            foreach (int x1 in x)
+            {
+                Console.WriteLine(x1);
+            }
+            Console.ReadKey();
+
+
+        }
+    }
+}
