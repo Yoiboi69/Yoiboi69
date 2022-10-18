@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication10
+{
+    public class myclass
+    {
+        private int x;
+        public int demo
+        {
+            get
+            {
+                return x;
+            }
+            set
+            {
+                x = value;
+
+            }
+        }
+    }
+ class class2
+ {
+     public static void Main(String[] args)
+     {
+         myclass a = new myclass();
+         a.demo = 99;
+         int x2=a.demo;
+         Console.WriteLine(x2);
+         Console.ReadKey();
+     }
+ }
+
+   }
