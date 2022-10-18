@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConstructorOverloading
+{
+
+    public class Program     //Parent Class
+    {
+        public Program()        // Default Constructor
+        {
+            Console.WriteLine("Default");
+        }
+
+        public Program(int a)   // Parameterized Constructor
+        {
+            Console.WriteLine(a * a);
+        }
+
+        public Program(int a, String b)    // Parameterized Constructor
+        {
+            Console.WriteLine(a % 2 + b);
+        }
+
+        public Program(String a, int b)      // Parameterized Constructor
+        {
+            Console.WriteLine(a + b * b * b);
+        }
+
+        public void Show()    //  Parent Class Function
+        {
+            Console.WriteLine("Show the Output");
+        }
+
+    }
+
+    public class Sub : Program     // Child Class
+    {
+        public void Show()        // Child Class Function
+        {
+            Console.WriteLine("Child Show");
+        }
+
+        static void Main(string[] args)
+        {
+            Sub S1 = new Sub();
+            S1.Show();         // Function Overiding       
+            Program P1 = new Program(50);     // Constructor Overloading
+            Program P2 = new Program("Ramesh", 40);   // Constructor Overloading
+            Program P3 = new Program(25, "abc");   // Constructor Overloading                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+            Console.ReadKey();
+        }
+    }
+}
