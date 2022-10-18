@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a, b;
+            int[][] j = new int[3][];
+            j[0] = new int[2];
+            j[0][0] = 34;
+            j[0][1] = 12;
+            j[1] = new int[3];
+            j[1][0] = 69;
+            j[1][1] = 26;
+            j[1][2] = 89;
+            j[2] = new int[1];
+            j[2][0] = 24;
+            for (a = 0; a < j.Length; a++)
+            {
+                for (b = 0; b < j[a].Length; b++)
+                {
+                    Console.Write(j[a][b] + ",");
+                    
+                    Console.Write("\b");
+                    Console.WriteLine();
+                }
+                Console.ReadKey();
+            }
+
+       
+        } }
+
+}
