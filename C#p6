@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace AbstractAndSealedClassExample
+{
+    public abstract class Program     // Abstract Class
+    {
+        public Program()          // Default Constructor
+        {
+            Console.WriteLine("Default");
+        }
+
+        public void Show()
+        {
+            Console.WriteLine("show The Output");
+        }
+    }
+
+    public sealed class Sub       // Sealed Class
+    {
+        public void Square(int z)
+        {
+            Console.WriteLine(z * z);
+        }
+    }
+
+    public class Demo : Program      // Abstract Class Got Inherited
+    {
+
+        static void Main(string[] args)
+        {
+            Demo D1 = new Demo();    // Object Created for Child Class of abstract Class
+            D1.Show();
+            Sub S1 = new Sub();    // Sealed Class Called by Creating its Object
+            S1.Square(10);
+            Console.ReadKey();
+        }
+    }
+}
